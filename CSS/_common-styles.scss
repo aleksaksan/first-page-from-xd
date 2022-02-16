@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Typo-formal;
+    src: url(".\fonts\typo_formal\Typo Formal Regular Demo.otf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+div{
+    margin: 0;
+}
+body {
+    max-width: 1920px;
+    min-width: 800px;
+    margin: 0 auto;
+    font-family: "Titillium Web";
+    a {
+        text-decoration: none;
+    }
+}
+.pos-abs {
+    position: absolute;
+}
+.typo-formal-family {
+    font-family: Typo-formal;
+}
+.dis-block {
+    display: block;
+}
+.dis-inline {
+    display: inline-block;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-container {
+    display: flex;
+
+    &.vertical-center {
+        align-items: center;
+    }
+
+    &.horiz-center {
+        justify-content: center;
+    }
+}
+
+.buy-button {
+    background-color: #0b0c0f;
+    border: none;
+    width: 254px;
+    height: 64px;
+    left: 39px;
+    bottom: -32px;
+    color: white;
+    font-size: 19px;
+    justify-content: center;
+    img {
+        display: inline-block;
+        top: 0;
+        left: 0;
+    }
+}
+
+
