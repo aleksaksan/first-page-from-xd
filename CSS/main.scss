@@ -1,118 +1,117 @@
 @import "common-styles";
 
-.start-page {
-    background-image: url("../part1/sushibg.png");
-    max-height: 1080px;
-    vertical-align: middle;
-
-    .opacity-background {
-        background-color: rgba($color: #000000, $alpha: 0.55);
-        height: 100%;
-    }
-    header {
-        width: 100%;
-
+header {
+    position: fixed;
+    z-index: 10;
+    .grid-container{
+        height: 177px;
         display: grid;
         grid-template-columns:
             minmax(0, 92px) minmax(181px, 235px) minmax(30px, 665px) minmax(478px, 688px) minmax(22px, 139px)
             22px minmax(0, 75px);
+            align-items: center;
+    }
+    nav{
+        grid-column: 4/5;
+    }
+    
+    .btn {
+        height: 8px;
+        width: 22px;
+        background-image: url("../part1/icons/button-menu.png");
+        background-color: transparent;
+        border: none;
+        grid-column: 6/7;
+    }
 
-        .head-link {
-            @extend .nav-link;
-            grid-column: 2/3;
-            &.logo {
-                font-size: 20px;
-                font-weight: bold;
-                font-family: "Titillium Web";
-            }
+    .head-link {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Titillium Web";
+        position: relative;
+        grid-column: 2/3;
+    }
+    
+    .carte-ref{
+        margin-left: 56px;
+    }
+    .nav-link {
+        font-size: 14px;
+        text-align: end;
+        text-decoration: none;
+        position: relative;
+        color:white;
+    }
+    
+    .nos-link {
+        width: 108px;
+    }
+    .nos-link::before {
+        background-image: url("../part1/icons/storefront.png");
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        top: -2px;
+    }
+    .come-link {
+        width: 84px;
+    }
+    .come-link::before {
+        background-image: url("../part1/icons/membership.png");
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        top: -2px;
+    }
+    .connect-link {
+        width: 208px;
+    }
+    .connect-link::before {
+        background-image: url("../part1/icons/account-connectp.png");
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        top: -2px;
+    }
+    .painter-link {
+        width: 73px;
+    }
+    .painter-link::before {
+        background-image: url("../part1/icons/shopping-bag.png");
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        top: -2px;
+    }
+}
 
-            img {
-                position: relative;
-                top: 54px;
-            }
-        }
 
-        nav {
-            grid-column: 4/5;
-        }
-        .nav-link {
-            color: white;
-            font-size: 14px;
-            position: relative;
-            text-align: end;
-        }
-
-        .nos-link {
-            width: 108px;
-        }
-        .nos-link::before {
-            background-image: url("../part1/icons/storefront.png");
-            content: "";
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            left: 0;
-            top: -2px;
-        }
-        .come-link {
-            width: 84px;
-        }
-        .come-link::before {
-            background-image: url("../part1/icons/membership.png");
-            content: "";
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            left: 0;
-            top: -2px;
-        }
-        .connect-link {
-            width: 208px;
-        }
-        .connect-link::before {
-            background-image: url("../part1/icons/account-connectp.png");
-            content: "";
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            left: 0;
-            top: -2px;
-        }
-        .painter-link {
-            width: 73px;
-        }
-        .painter-link::before {
-            background-image: url("../part1/icons/shopping-bag.png");
-            content: "";
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            left: 0;
-            top: -2px;
-        }
-        button {
-            height: 8px;
-            width: 22px;
-            background-image: url("../part1/icons/button-menu.png");
-            background-color: transparent;
-            border: none;
-            grid-column: 6/7;
-        }
+.start-page {
+    background-image: url("../part1/sushibg.png");
+    
+    .opacity-background {
+        background-color: rgba($color: #000000, $alpha: 0.55);
+        padding-top: 222px;
+        padding-bottom: 418px;
     }
 
     .logo-container {
-        height: 976px;
         flex-direction: column;
-        padding-top: 40px;
 
         .big-logo {
             margin: 0 auto;
-            height: 278px;
-            display: block;
         }
 
         div {
-            padding-top: 92px;
+            margin-top: 92px;
         }
         button {
             color: white;
@@ -171,6 +170,7 @@
     p {
         margin: 164px 61px 124px 183px;
         width: 764px;
+        min-width: 500px;
         font-size: 65px;
         font-weight: 900;
         text-align: center;
@@ -187,7 +187,6 @@
 }
 
 .thist-stock-container {
-    background-size: auto;
     height: 949px;
     background-color: black;
     display: grid;
@@ -257,6 +256,7 @@
     height: 725px;
     background-color: #000000;
     width: 100%;
+    overflow: hidden;
 
     .title-buttons {
         height: 98px;
@@ -280,7 +280,7 @@
             display: block;
             margin-top: 62px;
 
-            button {
+            .butt {
                 border: none;
                 width: 65.5px;
                 height: 34px;
@@ -295,19 +295,22 @@
     }
 }
 .products-carousel-container {
-    margin-left: 143px;
-    margin-bottom: 134px;
-    width: 1634px;
+    padding-left: 143px;
+    padding-bottom: 134px;
+    padding-right: 143px;
+    min-width: 1600px;
     height: 627px;
     padding-bottom: 132px;
     align-items: flex-end;
+    overflow: hidden;
 
     .products-carousel-item {
         width: 347px;
         height: 375px;
         background-color: #222a3e;
         position: relative;
-
+        
+        
         .promo-logo {
             font-size: 19px;
             background-color: #fdd69b;
@@ -646,7 +649,7 @@
                     position: absolute;
                     z-index: 0;
                 }
-                
+
                 .name {
                     font-size: 31px;
                     text-align: center;
@@ -656,15 +659,13 @@
                     margin-top: 19px;
                     margin-bottom: 11px;
                 }
-                
-                
             }
             .buy-button {
                 font-size: 19px;
                 font-weight: 200;
                 margin: 0 auto;
             }
-            
+
             .maki-concombre {
                 top: 25px;
                 left: 70px;
@@ -675,17 +676,17 @@
                 left: 44px;
                 position: absolute;
             }
-            .crispy-avocat{
+            .crispy-avocat {
                 position: absolute;
                 top: 17px;
-                left: 74px
+                left: 74px;
             }
-            .cali-saumon-avocat{
+            .cali-saumon-avocat {
                 position: absolute;
                 top: 12px;
                 left: 51px;
             }
-            .Crevettes-tempura{
+            .Crevettes-tempura {
                 position: absolute;
                 left: 79px;
                 top: 17px;
@@ -704,39 +705,38 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 0;
         position: relative;
-        .instagram-contacts{
+        .instagram-contacts {
             position: absolute;
             width: 427px;
             height: 388px;
-            left:757px;
+            left: 757px;
             top: 309px;
             background-color: white;
             z-index: 3;
             text-align: center;
             font-size: 26px;
 
-            .insta-text{
-                color: #FDD69B;
+            .insta-text {
+                color: #fdd69b;
                 font-size: 36px;
                 font-weight: bold;
                 margin-bottom: 18px;
                 margin-top: 69px;
             }
-            .ref-inst{
+            .ref-inst {
                 text-decoration: none;
                 opacity: 86%;
                 margin-bottom: 32px;
             }
-            &p{
-                
+            &p {
                 opacity: 75%;
                 width: 340px;
                 margin: 0 auto;
             }
         }
-        
+
         &::before {
-            content: '';
+            content: "";
             width: 480px;
             height: 466px;
             background-color: black;
@@ -744,10 +744,10 @@
             position: absolute;
             z-index: 2;
         }
-        .container-with-icons{
+        .container-with-icons {
             margin-bottom: -5px;
             position: relative;
-            .insta-line{
+            .insta-line {
                 width: 413px;
                 position: absolute;
                 left: 31px;
@@ -757,43 +757,41 @@
                 font-size: 22px;
                 font-weight: bold;
             }
-            .amount-imgs{
+            .amount-imgs {
                 margin-right: 5px;
             }
-            
         }
     }
 }
-.contacts-page{
+.contacts-page {
     background-color: #111011;
-    height: 575px;
-    width: 1920px;
+    padding-bottom: 136.5px;
     padding-left: 151px;
     color: white;
-    .contacts-flex{
+    .contacts-flex {
         width: 1358px;
         margin-left: 151px;
     }
-    .text-f24{
+    .text-f24 {
         font-size: 24px;
         font-weight: 400;
     }
-    .text-f17{
+    .text-f17 {
         font-size: 17px;
         font-weight: 200;
         height: 22px;
         margin-bottom: 4px;
     }
-    .text-fb17{
+    .text-fb17 {
         font-weight: bold;
     }
-    .golden-text{
+    .golden-text {
         font-size: 26px;
-        color: #FDD69B;
+        color: #fdd69b;
         height: 35px;
         margin-bottom: 36px;
     }
-    .ref-button{
+    .ref-button {
         text-decoration: none;
         width: 380px;
         height: 55px;
@@ -801,25 +799,25 @@
         font-weight: bold;
         color: black;
         border-radius: 43px;
-        background-color: #FDD69B;
+        background-color: #fdd69b;
         padding: 15px 28px;
     }
-    .wdth{
+    .wdth {
         width: 421px;
         height: 44px;
         margin-bottom: 7px;
     }
-    .contacts-and-location{
+    .contacts-and-location {
         width: 530px;
         margin-top: 101px;
     }
-    .besoin-text{
+    .besoin-text {
         height: 32px;
         margin-bottom: 5px;
         position: relative;
-        &::before{
-            content: '';
-            background-image: url('../part5/support_agent_black_24dp.png');
+        &::before {
+            content: "";
+            background-image: url("../part5/support_agent_black_24dp.png");
             width: 113px;
             height: 113px;
             position: absolute;
@@ -827,15 +825,15 @@
             left: -126px;
         }
     }
-    .locali{
+    .locali {
         height: 32px;
         margin-bottom: 8px;
         margin-top: 69px;
         font-size: 24px;
         position: relative;
-        &::before{
-            content: '';
-            background-image: url('../part5/Icon metro-location.png');
+        &::before {
+            content: "";
+            background-image: url("../part5/Icon metro-location.png");
             width: 68px;
             height: 106px;
             position: absolute;
@@ -843,29 +841,28 @@
             left: -100px;
         }
     }
-    .div-line{
+    .div-line {
         width: 0;
         height: 511px;
-        border-left: dotted 1px #FDD69B;
+        border-left: dotted 1px #fdd69b;
         margin-top: 28px;
     }
-    .email-container{
+    .email-container {
         width: 378px;
         color: white;
         font-size: 24px;
         margin-top: 100px;
-        .nous-text{
+        .nous-text {
             height: 32px;
             margin-bottom: 24px;
         }
-        .face-inst-pics{
+        .face-inst-pics {
             margin-bottom: 22px;
-            .icon-facebook{
+            .icon-facebook {
                 margin-right: 40px;
             }
         }
-        .input-with-button{
-            
+        .input-with-button {
             color: white;
             opacity: 60%;
             width: 370px;
@@ -874,14 +871,12 @@
             background-color: #111011;
             padding-top: 5px;
             padding-left: 73px;
-            
         }
-        
     }
-    .Recevez-text{
+    .Recevez-text {
         margin-left: 5px;
     }
-    .input-custom{
+    .input-custom {
         position: relative;
         outline: none;
         border: none;
@@ -889,9 +884,9 @@
         font-size: 17px;
         color: white;
         opacity: 100%;
-        &::before{
-            content: '';
-            background-image: url('../part5/Icon-message.png');
+        &::before {
+            content: "";
+            background-image: url("../part5/Icon-message.png");
             position: absolute;
             width: 22px;
             height: 22px;
@@ -899,9 +894,9 @@
             left: -32px;
             opacity: 100%;
         }
-        &::after{
-            content: 'ok';
-            background-color: #D9031C;
+        &::after {
+            content: "ok";
+            background-color: #d9031c;
             width: 47px;
             height: 36px;
             position: absolute;
@@ -910,7 +905,7 @@
             font-size: 17px;
         }
     }
-    .logo-pand{
+    .logo-pand {
         width: 230px;
         height: 334px;
         display: block;

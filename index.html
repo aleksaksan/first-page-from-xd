@@ -18,26 +18,25 @@
     />
   </head>
   <body>
+    <header>
+      <div class="grid-container container">
+        <div class="head-link flex-container vertical-center">
+          <img src="../part1/logo-mini.png" alt="logo"/>
+          <a class="white-color carte-ref">CARTE</a>
+        </div>
+      <nav class="flex-container flex-between vertical-center desktop-only">
+        <a href="#" class="nav-link white-color nos-link">NOS SHOPS</a>
+        <a href="#" class="nav-link white-color come-link">COME IN</a>
+        <a href="#" class="nav-link white-color connect-link"
+          >ME CONNECTER/M'INSCRIRE</a
+        >
+        <a href="#" class="nav-link painter-link white-color">PANIER</a>
+      </nav>
+      <button class="btn"></button>
+      </div>
+    </header>
     <div class="start-page">
-      <div class="opacity-background">
-        <header class="flex-container vertical-center">
-          <a
-            href="#"
-            class="head-link logo flex-between flex-container vertical-center"
-          >
-            <img src="../part1/logo-mini.png" alt="logo" />
-            CARTE</a
-          >
-          <nav class="flex-container flex-between vertical-center">
-            <a href="#" class="nav-link nos-link">NOS SHOPS</a>
-            <a href="#" class="nav-link come-link">COME IN</a>
-            <a href="#" class="nav-link connect-link"
-              >ME CONNECTER/M'INSCRIRE</a
-            >
-            <a href="#" class="nav-link painter-link">PANIER</a>
-          </nav>
-          <button></button>
-        </header>
+      <div class="opacity-background ">
         <div class="logo-container flex-container">
           <img class="big-logo" src="./part1/logo.png" alt="logo" />
           <div class="flex-container horiz-center">
@@ -80,7 +79,7 @@
       <img src="part2/plate-of-rolls.png" alt="plate of rolls" />
     </div>
     <div class="thist-stock-container">
-      <div class="fila-item">
+      <div class="fila-item desktop-only">
         <div></div>
       </div>
       <div class="plate-item">
@@ -103,10 +102,11 @@
           CUIT
         </p>
       </div>
-      <div class="big-set-item">
+      <div class="big-set-item desktop-only">
         <div></div>
       </div>
     </div>
+
     <div class="products-part dis-block">
       <div class="title-buttons flex-between">
         <div class="text">Produits Populaire</div>
@@ -158,7 +158,7 @@
             <div class="price">3.00£</div>
           </div>
         </div>
-        <div class="products-carousel-item">
+        <div class="products-carousel-item desktop-only">
           <img src="part2/bottom/edamame.png" />
           <div class="promo-logo">promo</div>
           <button class="flex-container vertical-center">
@@ -177,7 +177,7 @@
             <div class="price">3.90£</div>
           </div>
         </div>
-        <div class="products-carousel-item">
+        <div class="products-carousel-item desktop-only">
           <img src="part2/bottom/tartare_saumon_avocat.png" />
           <div class="promo-logo">promo</div>
           <button class="flex-container vertical-center buy-button">
@@ -211,7 +211,7 @@
         </p>
         <button>JE DÉCOUVRE</button>
       </div>
-      <div class="carousel-div-container">
+      <div class="carousel-div-container desktop-only">
         <div class="carousel-container flex-between">
           <div class="card-block">
             <img class="dis-block" src="./part3/bit-in-hashi.png" alt="sushi" />
@@ -233,7 +233,7 @@
     </div>
     <div class="menu-block">
       <div class="flex-container">
-        <div class="products-container">
+        <div class="products-container desktop-only">
           <div class="set-img-container">
             <img src="./part4/set-sushi-maki-rolls.png" alt="sushi-set" />
             <div class="SAIYAN">SAIYAN</div>
@@ -486,7 +486,7 @@
 
     </div>
     <div class="contacts-page">
-        <div class="flex-between contacts-flex">
+        <div class="flex-between contacts-flex mobile-flex">
             <div class="contacts-and-location">
                 <div class="text-f24 besoin-text">Besoin d'aide ? </div>
                 <p class="text-f17 wdth">
@@ -502,7 +502,7 @@ Contactez-nous !
                 <div class="text-fb17">Pont de Cheruy</div>
 
             </div>
-            <div class="div-line"></div>
+            <div class="div-line desktop-only"></div>
             <div class="email-container">
                 <div class="nous-text">Nous Suivre ? </div>
                 <div class="face-inst-pics">
@@ -519,9 +519,10 @@ Contactez-nous !
 
                 </div>
             </div>  
-            <div class="div-line"></div>
-            <img class="logo-pand" src="./part5/logo-panda.png" alt="logo-panda">
+            <div class="div-line desktop-only"></div>
+            <img class="logo-pand desktop-only" src="./part5/logo-panda.png" alt="logo-panda">
         </div>
     </div>
   </body>
+  <script src="./js/common-stuff.js"></script>
 </html>

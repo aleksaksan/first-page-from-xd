@@ -1,6 +1,6 @@
 @font-face {
   font-family: Typo-formal;
-  src: url(".ontstypo_formalTypo Formal Regular Demo.otf");
+  src: url("../fonts/typo_formal/Typo Formal Regular Demo.otf");
 }
 
 * {
@@ -8,14 +8,25 @@
           box-sizing: border-box;
 }
 
+.container {
+  width: 1920px;
+  margin: 0 auto;
+}
+
 div {
   margin: 0;
+}
+
+.white-color {
+  color: white;
 }
 
 body {
   max-width: 1920px;
   min-width: 800px;
   margin: 0 auto;
+  overflow-x: hidden;
+  max-width: 100vw;
   font-family: "Titillium Web";
 }
 
@@ -86,112 +97,138 @@ body a {
   left: 0;
 }
 
-.start-page {
-  background-image: url("../part1/sushibg.png");
-  max-height: 1080px;
-  vertical-align: middle;
+@media (min-width: 901px) {
+  .mobile-only {
+    display: none !important;
+  }
 }
 
-.start-page .opacity-background {
-  background-color: rgba(0, 0, 0, 0.55);
-  height: 100%;
+@media (max-width: 900px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .happy-lunch-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .happy-lunch-container img {
+    position: absolute;
+    left: -20px;
+    z-index: 1;
+    opacity: 40%;
+  }
+  .thist-stock-container {
+    -ms-grid-columns: 369px 364px !important;
+        grid-template-columns: 369px 364px !important;
+    padding-left: 36px;
+        grid-template-areas: "plate-r PLATEAU-text" "CALIFORNIA-text calif-r" !important;
+  }
+  .thist-stock-container .plate-item {
+    background-image: url("../part2/plate-roll.png");
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: plate-r;
+  }
+  .thist-stock-container .plate-item div {
+    background-color: #000000;
+    opacity: 19%;
+  }
+  .thist-stock-container .califor-item {
+    background-image: url("../part2/california.png");
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: calif-r;
+  }
+  .thist-stock-container .califor-item div {
+    background-color: #000000;
+    opacity: 27%;
+  }
+  .thist-stock-container .text-item {
+    text-align: center;
+    font-size: 27px;
+    font-weight: 100;
+    color: white;
+  }
+  .thist-stock-container .text-item .font-25 {
+    font-size: 25px;
+  }
+  .thist-stock-container .text-item .black-text {
+    font-weight: 900;
+  }
+  .thist-stock-container .california-text {
+    padding-top: 151px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: CALIFORNIA-text;
+  }
+  .thist-stock-container .plate-text {
+    padding-top: 135px;
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: PLATEAU-text;
+  }
+  .products-carousel-container {
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+    min-width: 100% !important;
+  }
+  .menus-midi-block {
+    display: block !important;
+    margin-left: -23.2%;
+  }
+  .menu-block {
+    padding-left: unset !important;
+    overflow: hidden;
+  }
+  .menu-block .grid-menu {
+    margin-left: 15px !important;
+    gap: 90px !important;
+  }
+  .nav-panel {
+    display: block !important;
+  }
+  .nav-panel .nav-item + .nav-item {
+    margin-left: 10px;
+  }
+  .head-ref::after {
+    width: 520px;
+    margin-left: 210px;
+  }
+  .instagram-grid-container {
+    margin-left: -65%;
+    overflow: hidden;
+  }
+  .mobile-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
-.start-page header {
-  width: 100%;
+header {
+  position: fixed;
+  z-index: 10;
+}
+
+header .grid-container {
+  height: 177px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: minmax(0, 92px) minmax(181px, 235px) minmax(30px, 665px) minmax(478px, 688px) minmax(22px, 139px) 22px minmax(0, 75px);
       grid-template-columns: minmax(0, 92px) minmax(181px, 235px) minmax(30px, 665px) minmax(478px, 688px) minmax(22px, 139px) 22px minmax(0, 75px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.start-page header .head-link {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-}
-
-.start-page header .head-link.logo {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: "Titillium Web";
-}
-
-.start-page header .head-link img {
-  position: relative;
-  top: 54px;
-}
-
-.start-page header nav {
+header nav {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/5;
 }
 
-.start-page header .nav-link, .start-page header .head-link {
-  color: white;
-  font-size: 14px;
-  position: relative;
-  text-align: end;
-}
-
-.start-page header .nos-link {
-  width: 108px;
-}
-
-.start-page header .nos-link::before {
-  background-image: url("../part1/icons/storefront.png");
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 0;
-  top: -2px;
-}
-
-.start-page header .come-link {
-  width: 84px;
-}
-
-.start-page header .come-link::before {
-  background-image: url("../part1/icons/membership.png");
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 0;
-  top: -2px;
-}
-
-.start-page header .connect-link {
-  width: 208px;
-}
-
-.start-page header .connect-link::before {
-  background-image: url("../part1/icons/account-connectp.png");
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 0;
-  top: -2px;
-}
-
-.start-page header .painter-link {
-  width: 73px;
-}
-
-.start-page header .painter-link::before {
-  background-image: url("../part1/icons/shopping-bag.png");
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 0;
-  top: -2px;
-}
-
-.start-page header button {
+header .btn {
   height: 8px;
   width: 22px;
   background-image: url("../part1/icons/button-menu.png");
@@ -202,23 +239,107 @@ body a {
   grid-column: 6/7;
 }
 
+header .head-link {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Titillium Web";
+  position: relative;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+header .carte-ref {
+  margin-left: 56px;
+}
+
+header .nav-link {
+  font-size: 14px;
+  text-align: end;
+  text-decoration: none;
+  position: relative;
+  color: white;
+}
+
+header .nos-link {
+  width: 108px;
+}
+
+header .nos-link::before {
+  background-image: url("../part1/icons/storefront.png");
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: -2px;
+}
+
+header .come-link {
+  width: 84px;
+}
+
+header .come-link::before {
+  background-image: url("../part1/icons/membership.png");
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: -2px;
+}
+
+header .connect-link {
+  width: 208px;
+}
+
+header .connect-link::before {
+  background-image: url("../part1/icons/account-connectp.png");
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: -2px;
+}
+
+header .painter-link {
+  width: 73px;
+}
+
+header .painter-link::before {
+  background-image: url("../part1/icons/shopping-bag.png");
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: -2px;
+}
+
+.start-page {
+  background-image: url("../part1/sushibg.png");
+}
+
+.start-page .opacity-background {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding-top: 222px;
+  padding-bottom: 418px;
+}
+
 .start-page .logo-container {
-  height: 976px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 40px;
 }
 
 .start-page .logo-container .big-logo {
   margin: 0 auto;
-  height: 278px;
-  display: block;
 }
 
 .start-page .logo-container div {
-  padding-top: 92px;
+  margin-top: 92px;
 }
 
 .start-page .logo-container button {
@@ -284,6 +405,7 @@ body a {
 .happy-lunch-container p {
   margin: 164px 61px 124px 183px;
   width: 764px;
+  min-width: 500px;
   font-size: 65px;
   font-weight: 900;
   text-align: center;
@@ -301,7 +423,6 @@ body a {
 }
 
 .thist-stock-container {
-  background-size: auto;
   height: 949px;
   background-color: black;
   display: -ms-grid;
@@ -400,6 +521,7 @@ body a {
   height: 725px;
   background-color: #000000;
   width: 100%;
+  overflow: hidden;
 }
 
 .products-part .title-buttons {
@@ -427,7 +549,7 @@ body a {
   margin-top: 62px;
 }
 
-.products-part .title-buttons .buttons-container button {
+.products-part .title-buttons .buttons-container .butt {
   border: none;
   width: 65.5px;
   height: 34px;
@@ -440,14 +562,16 @@ body a {
 }
 
 .products-carousel-container {
-  margin-left: 143px;
-  margin-bottom: 134px;
-  width: 1634px;
+  padding-left: 143px;
+  padding-bottom: 134px;
+  padding-right: 143px;
+  min-width: 1600px;
   height: 627px;
   padding-bottom: 132px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  overflow: hidden;
 }
 
 .products-carousel-container .products-carousel-item {
@@ -933,7 +1057,7 @@ body a {
 }
 
 .instagram-page .instagram-grid-container .instagram-contacts .insta-text {
-  color: #FDD69B;
+  color: #fdd69b;
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 18px;
@@ -953,7 +1077,7 @@ body a {
 }
 
 .instagram-page .instagram-grid-container::before {
-  content: '';
+  content: "";
   width: 480px;
   height: 466px;
   background-color: black;
@@ -984,8 +1108,7 @@ body a {
 
 .contacts-page {
   background-color: #111011;
-  height: 575px;
-  width: 1920px;
+  padding-bottom: 136.5px;
   padding-left: 151px;
   color: white;
 }
@@ -1013,7 +1136,7 @@ body a {
 
 .contacts-page .golden-text {
   font-size: 26px;
-  color: #FDD69B;
+  color: #fdd69b;
   height: 35px;
   margin-bottom: 36px;
 }
@@ -1026,7 +1149,7 @@ body a {
   font-weight: bold;
   color: black;
   border-radius: 43px;
-  background-color: #FDD69B;
+  background-color: #fdd69b;
   padding: 15px 28px;
 }
 
@@ -1048,7 +1171,7 @@ body a {
 }
 
 .contacts-page .besoin-text::before {
-  content: '';
+  content: "";
   background-image: url("../part5/support_agent_black_24dp.png");
   width: 113px;
   height: 113px;
@@ -1066,7 +1189,7 @@ body a {
 }
 
 .contacts-page .locali::before {
-  content: '';
+  content: "";
   background-image: url("../part5/Icon metro-location.png");
   width: 68px;
   height: 106px;
@@ -1078,7 +1201,7 @@ body a {
 .contacts-page .div-line {
   width: 0;
   height: 511px;
-  border-left: dotted 1px #FDD69B;
+  border-left: dotted 1px #fdd69b;
   margin-top: 28px;
 }
 
@@ -1128,7 +1251,7 @@ body a {
 }
 
 .contacts-page .input-custom::before {
-  content: '';
+  content: "";
   background-image: url("../part5/Icon-message.png");
   position: absolute;
   width: 22px;
@@ -1139,8 +1262,8 @@ body a {
 }
 
 .contacts-page .input-custom::after {
-  content: 'ok';
-  background-color: #D9031C;
+  content: "ok";
+  background-color: #d9031c;
   width: 47px;
   height: 36px;
   position: absolute;

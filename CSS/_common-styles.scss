@@ -1,19 +1,27 @@
 @font-face {
     font-family: Typo-formal;
-    src: url(".\fonts\typo_formal\Typo Formal Regular Demo.otf");
+    src: url("../fonts/typo_formal/Typo Formal Regular Demo.otf");
 }
 
 * {
     box-sizing: border-box;
 }
-
+.container{
+    width: 1920px;
+    margin: 0 auto;
+}
 div{
     margin: 0;
+}
+.white-color{
+    color: white;
 }
 body {
     max-width: 1920px;
     min-width: 800px;
     margin: 0 auto;
+    overflow-x: hidden;
+    max-width: 100vw;
     font-family: "Titillium Web";
     a {
         text-decoration: none;
@@ -65,4 +73,121 @@ body {
     }
 }
 
+@media (max-width: 1100px)
+{
+    
+}
+
+@media (min-width: 901px)
+{
+    .mobile-only{
+        display: none !important;
+    }
+}
+@media (max-width: 900px)
+{
+    .desktop-only{
+        display: none !important;
+    }
+
+    .happy-lunch-container{
+        padding-left: 15px;
+        padding-right: 15px;
+
+        img{
+            position: absolute;
+            left: -20px;
+            z-index: 1;
+            opacity: 40%;
+        }
+        
+    }
+    
+    .thist-stock-container {
+        grid-template-columns: 369px 364px !important;
+        padding-left: 36px;
+        grid-template-areas:
+        "plate-r PLATEAU-text"
+        "CALIFORNIA-text calif-r" !important;
+        
+        .plate-item {
+            background-image: url("../part2/plate-roll.png");
+            grid-area: plate-r;
+            div {
+                background-color: #000000;
+                opacity: 19%;
+            }
+        }
+        .califor-item {
+            background-image: url("../part2/california.png");
+            grid-area: calif-r;
+            div {
+                background-color: #000000;
+                opacity: 27%;
+            }
+        }
+        
+        .text-item {
+            text-align: center;
+            font-size: 27px;
+            font-weight: 100;
+            color: white;
+            .font-25 {
+                font-size: 25px;
+            }
+            .black-text {
+                font-weight: 900;
+            }
+        }
+        .california-text {
+            padding-top: 151px;
+            grid-area: CALIFORNIA-text;
+        }
+        .plate-text {
+            padding-top: 135px;
+            grid-area: PLATEAU-text;
+        }
+    }
+
+    .products-carousel-container{
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+        min-width: 100% !important;
+    }
+
+    .menus-midi-block{
+        display: block !important;
+        margin-left: -23.2%;
+    }
+   
+    .menu-block{
+        padding-left: unset !important; 
+        overflow: hidden;      
+    }
+
+    .menu-block .grid-menu {
+    margin-left: 15px !important;
+    gap: 90px !important;
+    
+    }
+    .nav-panel{
+        display: block !important;
+        .nav-item + .nav-item{
+            margin-left: 10px;
+        }
+    }
+    .head-ref::after {
+        width: 520px;
+        margin-left: 210px;
+    }
+    .instagram-grid-container {
+        margin-left: -65%;
+        overflow: hidden;
+    }
+    
+    .mobile-flex{
+        flex-direction: column-reverse;
+    }
+    
+}
 
